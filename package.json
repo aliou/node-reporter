@@ -1,0 +1,26 @@
+{
+  "name": "node-reporter",
+  "version": "1.0.0",
+  "description": "Reporter entries helper functions",
+  "main": "./lib/reporter",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliou/node-reporter.git"
+  },
+  "keywords": [
+    "reporter"
+  ],
+  "author": "Aliou Diallo <code@aliou.me>",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "path-extra": "^0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "coffee-script": "^1.7.1"
+  }
+}

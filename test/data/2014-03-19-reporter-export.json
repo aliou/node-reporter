@@ -1,0 +1,362 @@
+{
+  "snapshots" : [
+    {
+      "battery" : 1,
+      "reportImpetus" : 4,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -59.30763,
+        "peak" : -34.34741
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Mostly Cloudy",
+        "windKPH" : 1.6,
+        "windGustMPH" : 0,
+        "feelslikeC" : 9,
+        "tempF" : 48.1,
+        "windDegrees" : 253,
+        "pressureMb" : 1027,
+        "uv" : 0,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 1,
+        "relativeHumidity" : "83%",
+        "windDirection" : "WSW",
+        "feelslikeF" : 48,
+        "tempC" : 8.9,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 6
+      },
+      "date" : "2014-03-19T07:17:41+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 1,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -49.36776,
+        "peak" : -40.42363
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Mostly Cloudy",
+        "windKPH" : 1.6,
+        "windGustMPH" : 0,
+        "feelslikeC" : 9,
+        "tempF" : 48.1,
+        "windDegrees" : 253,
+        "pressureMb" : 1027,
+        "uv" : 0,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 1,
+        "relativeHumidity" : "83%",
+        "windDirection" : "WSW",
+        "feelslikeF" : 48,
+        "tempC" : 8.9,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 6
+      },
+      "date" : "2014-03-19T07:30:45+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.75,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -33.04667,
+        "peak" : -22.13976
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Scattered Clouds",
+        "windKPH" : 1.6,
+        "tempF" : 51.3,
+        "windDegrees" : 270,
+        "pressureMb" : 1028,
+        "uv" : 2,
+        "windMPH" : 1,
+        "relativeHumidity" : "77%",
+        "windDirection" : "West",
+        "tempC" : 10.7,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T10:14:04+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.6,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -28.84675,
+        "peak" : -18.29181
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 0,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 1.6,
+        "tempF" : 57.8,
+        "windDegrees" : 202,
+        "pressureMb" : 1028,
+        "uv" : -1,
+        "windMPH" : 1,
+        "relativeHumidity" : "61%",
+        "windDirection" : "SSW",
+        "tempC" : 14.3,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T12:57:46+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.45,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -47.1962,
+        "peak" : -19.55784
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "tempF" : 59.3,
+        "windDegrees" : 202,
+        "pressureMb" : 1027,
+        "uv" : -1,
+        "windMPH" : 2,
+        "relativeHumidity" : "59%",
+        "windDirection" : "SSW",
+        "tempC" : 15.2,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T14:08:46+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.25,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -33.30647,
+        "peak" : -27.89724
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 1.6,
+        "tempF" : 62.5,
+        "windDegrees" : 202,
+        "pressureMb" : 1026,
+        "uv" : -1,
+        "windMPH" : 1,
+        "relativeHumidity" : "53%",
+        "windDirection" : "SSW",
+        "tempC" : 16.9,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T16:12:55+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.75,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -38.42522,
+        "peak" : -35.64372
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "tempF" : 61.6,
+        "windDegrees" : 180,
+        "pressureMb" : 1025,
+        "uv" : -1,
+        "windMPH" : 2,
+        "relativeHumidity" : "55%",
+        "windDirection" : "South",
+        "tempC" : 16.4,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T18:18:14+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.55,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -28.14623,
+        "peak" : -21.07896
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 0,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "date" : "2014-03-19T20:14:42+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.55,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -47.30056,
+        "peak" : -36.09525
+      },
+      "photoSet" : {
+        "photos" : [
+          {
+            "meteringMode" : 5,
+            "brightnessValue" : -0.3052117,
+            "focalLengthIn35mm" : 35,
+            "longitudeRef" : "E",
+            "sceneCaptureType" : 0,
+            "exposureMode" : 0,
+            "resolutionUnit" : 2,
+            "make" : "Apple",
+            "software" : "7.1",
+            "assetUrl" : "assets-library:\/\/asset\/asset.JPG?id=CB9FD999-00E7-44CD-BCCD-9845BCB1599B&ext=JPG",
+            "isoSpeed" : 500,
+            "exposureTime" : 0.06666667,
+            "shutterSpeed" : 3.906905,
+            "depth" : 8,
+            "latitude" : 48.8373,
+            "fNumber" : 2.4,
+            "sensingMode" : 2,
+            "longitude" : 2.350038,
+            "apertureValue" : 2.526069,
+            "latitudeRef" : "N",
+            "focalLength" : 4.28,
+            "altitude" : 54,
+            "exposureProgram" : 2,
+            "model" : "iPhone 4S",
+            "dateTime" : "2014-03-19T20:34:11+0100",
+            "pixelWidth" : 3264,
+            "flash" : 16,
+            "orientation" : 3,
+            "pixelHeight" : 2448,
+            "whiteBalance" : 0
+          }
+        ]
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "windGustMPH" : 0,
+        "tempF" : 54.6,
+        "windDegrees" : 245,
+        "pressureMb" : 1024,
+        "uv" : -1,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 2,
+        "relativeHumidity" : "69%",
+        "windDirection" : "WSW",
+        "tempC" : 12.6,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T22:45:54+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.5,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -58.2966,
+        "peak" : -40.68468
+      },
+      "sectionIdentifier" : "1-2014-3-19",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "windGustMPH" : 0,
+        "tempF" : 54.6,
+        "windDegrees" : 245,
+        "pressureMb" : 1024,
+        "uv" : -1,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 2,
+        "relativeHumidity" : "69%",
+        "windDirection" : "WSW",
+        "tempC" : 12.6,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-19T23:27:04+0100",
+      "responses" : [
+      ]
+    }
+  ]
+}

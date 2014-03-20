@@ -1,0 +1,347 @@
+{
+  "snapshots" : [
+    {
+      "battery" : 0.35,
+      "reportImpetus" : 3,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -36.77481,
+        "peak" : -15.78949
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "windGustMPH" : 0,
+        "tempF" : 54.6,
+        "windDegrees" : 245,
+        "pressureMb" : 1024,
+        "uv" : -1,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 2,
+        "relativeHumidity" : "69%",
+        "windDirection" : "WSW",
+        "tempC" : 12.6,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-20T00:00:17+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 1,
+      "reportImpetus" : 4,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -41.19371,
+        "peak" : -13.91241
+      },
+      "photoSet" : {
+        "photos" : [
+          {
+            "sceneCaptureType" : 0,
+            "pixelHeight" : 640,
+            "altitude" : 0,
+            "longitude" : 0,
+            "assetUrl" : "assets-library:\/\/asset\/asset.JPG?id=EFC003E5-0C07-42CD-88E5-C8189DBA0AA3&ext=JPG",
+            "latitude" : 0,
+            "depth" : 8,
+            "dateTime" : "2014-03-20T00:36:12+0100",
+            "pixelWidth" : 640,
+            "resolutionUnit" : 2
+          }
+        ]
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 0,
+        "windGustMPH" : 0,
+        "feelslikeC" : 8,
+        "tempF" : 46.1,
+        "windDegrees" : 265,
+        "pressureMb" : 1018,
+        "uv" : -1,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 0,
+        "relativeHumidity" : "83%",
+        "windDirection" : "West",
+        "feelslikeF" : 46,
+        "tempC" : 7.8,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 5
+      },
+      "date" : "2014-03-20T07:31:15+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 1,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -33.66099,
+        "peak" : -24.61903
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 3.2,
+        "windGustMPH" : 0,
+        "tempF" : 50.3,
+        "windDegrees" : 253,
+        "pressureMb" : 1017,
+        "uv" : -1,
+        "windGustKPH" : 0,
+        "precipTodayMetric" : 0,
+        "windMPH" : 2,
+        "relativeHumidity" : "75%",
+        "windDirection" : "WSW",
+        "tempC" : 10.2,
+        "stationID" : "IILEDEFR28",
+        "dewpointC" : 6
+      },
+      "date" : "2014-03-20T08:46:49+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.85,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -45.18468,
+        "peak" : -25.39785
+      },
+      "photoSet" : {
+        "photos" : [
+          {
+            "brightnessValue" : 0,
+            "meteringMode" : 0,
+            "focalLengthIn35mm" : 0,
+            "sceneCaptureType" : 0,
+            "exposureMode" : 0,
+            "resolutionUnit" : 0,
+            "assetUrl" : "assets-library:\/\/asset\/asset.PNG?id=2165D106-5736-49C5-AA60-D8EEDC868944&ext=PNG",
+            "isoSpeed" : 0,
+            "exposureTime" : 0,
+            "shutterSpeed" : 0,
+            "depth" : 8,
+            "latitude" : 0,
+            "fNumber" : 0,
+            "sensingMode" : 0,
+            "longitude" : 0,
+            "apertureValue" : 0,
+            "focalLength" : 0,
+            "altitude" : 0,
+            "exposureProgram" : 0,
+            "pixelWidth" : 640,
+            "dateTime" : "2014-03-20T08:59:25+0100",
+            "flash" : 0,
+            "pixelHeight" : 960,
+            "whiteBalance" : 0
+          }
+        ]
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 9.699999999999999,
+        "tempF" : 56.7,
+        "windDegrees" : 180,
+        "pressureMb" : 1016,
+        "uv" : -1,
+        "windMPH" : 6,
+        "relativeHumidity" : "60%",
+        "windDirection" : "South",
+        "tempC" : 13.7,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 6
+      },
+      "date" : "2014-03-20T10:46:00+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.7,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -37.30177,
+        "peak" : -26.42638
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 11.3,
+        "tempF" : 65,
+        "windDegrees" : 202,
+        "pressureMb" : 1014,
+        "uv" : -1,
+        "windMPH" : 7,
+        "relativeHumidity" : "46%",
+        "windDirection" : "SSW",
+        "tempC" : 18.3,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-20T13:03:09+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.6,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -21.63162,
+        "peak" : -15.3944
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 0,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 9.699999999999999,
+        "tempF" : 67.90000000000001,
+        "windDegrees" : 202,
+        "pressureMb" : 1012,
+        "uv" : -1,
+        "windMPH" : 6,
+        "relativeHumidity" : "42%",
+        "windDirection" : "SSW",
+        "tempC" : 19.9,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-20T14:24:44+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.5,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -35.55271,
+        "peak" : -29.57829
+      },
+      "photoSet" : {
+        "photos" : [
+          {
+            "brightnessValue" : 0,
+            "meteringMode" : 0,
+            "focalLengthIn35mm" : 0,
+            "sceneCaptureType" : 0,
+            "exposureMode" : 0,
+            "resolutionUnit" : 0,
+            "assetUrl" : "assets-library:\/\/asset\/asset.PNG?id=9AF957DA-12A7-4379-B077-7EC1CB28E35A&ext=PNG",
+            "isoSpeed" : 0,
+            "exposureTime" : 0,
+            "shutterSpeed" : 0,
+            "depth" : 8,
+            "latitude" : 0,
+            "fNumber" : 0,
+            "sensingMode" : 0,
+            "longitude" : 0,
+            "apertureValue" : 0,
+            "focalLength" : 0,
+            "altitude" : 0,
+            "exposureProgram" : 0,
+            "pixelWidth" : 640,
+            "dateTime" : "2014-03-20T15:16:39+0100",
+            "flash" : 0,
+            "pixelHeight" : 960,
+            "whiteBalance" : 0
+          }
+        ]
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 12.9,
+        "tempF" : 69,
+        "windDegrees" : 225,
+        "pressureMb" : 1012,
+        "uv" : -1,
+        "windMPH" : 8,
+        "relativeHumidity" : "39%",
+        "windDirection" : "SW",
+        "tempC" : 20.6,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 6
+      },
+      "date" : "2014-03-20T15:57:41+0100",
+      "responses" : [
+      ]
+    },
+    {
+      "battery" : 0.55,
+      "reportImpetus" : 2,
+      "steps" : -1,
+      "audio" : {
+        "avg" : -24.64674,
+        "peak" : -15.77771
+      },
+      "sectionIdentifier" : "1-2014-3-20",
+      "sync" : 0,
+      "connection" : 0,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "weather" : "Clear",
+        "windKPH" : 4.8,
+        "tempF" : 66.3,
+        "windDegrees" : 202,
+        "pressureMb" : 1010,
+        "uv" : -1,
+        "windMPH" : 3,
+        "relativeHumidity" : "44%",
+        "windDirection" : "SSW",
+        "tempC" : 19.1,
+        "stationID" : "I75003PA1",
+        "dewpointC" : 7
+      },
+      "date" : "2014-03-20T19:16:56+0100",
+      "responses" : [
+      ]
+    }
+  ]
+}
