@@ -13,10 +13,15 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #             ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
   #           :connection - The network connection of the device when the
   #             report was made (default: all), ['cellular', 'wifi', 'none']
+  # cb - A callback responding to the signature `function(err, reports)`
   #
-  # Returns an array containing the reports.
+  # Returns an array containing the reports or whatever the callback returns if
+  #  a callback is provided.
+  #  as a parameter.
   # TODO: Filter by date.
-  @list = (options) ->
+  @list = (options, cb) ->
+    [cb, options] = [options, null] if typeof options is 'function'
+
     reports = []
     directory = @options.directory
 
@@ -37,5 +42,8 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
         reports = _.filter reports, (r) ->
           r.connection == connections.indexOf options.connection
 
-    reports
+    if cb?
+      cb null, reports
+    else
+      reports
 ).call(Reports.prototype)
