@@ -39,6 +39,12 @@ var reporter = new Reporter({ directory: '/reports' });
 var reports = reporter.list({ connection: 'cellular' })
 
 console.log(reports);
+
+// OR with a callback:
+
+reporter.list({ connection: 'wifi' }, function(err, reports) {
+  console.log(reports.length);
+})
 ```
 
 ## Contributing
