@@ -32,7 +32,7 @@ The `connection` field can take the following values:
 
 ## Examples
 
-```
+```javascript
 var Reporter = require('node-reporter');
 
 var reporter = new Reporter({ directory: '/reports' });
@@ -47,8 +47,8 @@ console.log(reports);
 
 To do build run:
 
-```bash
-cake build
+```sh
+$ cake build
 ```
 
 ## License
