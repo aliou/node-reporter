@@ -1,6 +1,6 @@
 {
   "name": "node-reporter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Reporter entries helper functions",
   "main": "./lib/reporter",
   "scripts": {
