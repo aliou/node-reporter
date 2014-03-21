@@ -25,7 +25,7 @@ describe('Reports', function() {
 
       assert.equal(reports.length, 4, "Four reports");
     })
-    it('should list all available reports', function() {
+    it('should list all available reports depending on both their connection and their type', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ connection: 'wifi', type: 'sleep' })
 
