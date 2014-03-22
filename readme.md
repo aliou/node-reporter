@@ -7,6 +7,22 @@
 ```sh
 $ npm install node-reporter
 ```
+## Examples
+
+```javascript
+var Reporter = require('node-reporter');
+
+var reporter = new Reporter({ directory: '/reports' });
+var reports = reporter.list({ connection: 'cellular' })
+
+console.log(reports);
+
+// OR with a callback:
+
+reporter.list({ connection: 'wifi' }, function(err, reports) {
+  console.log(reports.length);
+})
+```
 
 ## Methods
 
@@ -29,23 +45,6 @@ The `connection` field can take the following values:
 * `'cellular'`
 * `'wifi'`
 * `'wake'`
-
-## Examples
-
-```javascript
-var Reporter = require('node-reporter');
-
-var reporter = new Reporter({ directory: '/reports' });
-var reports = reporter.list({ connection: 'cellular' })
-
-console.log(reports);
-
-// OR with a callback:
-
-reporter.list({ connection: 'wifi' }, function(err, reports) {
-  console.log(reports.length);
-})
-```
 
 ## Contributing
 
