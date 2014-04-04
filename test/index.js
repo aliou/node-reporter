@@ -25,6 +25,13 @@ describe('Reports', function() {
 
       assert.equal(reports.length, 4, "Four reports");
     })
+    it('should list all the reports depending on their date', function() {
+      var reporter = new Reporter(mockConfig)
+      var d = new Date('2014-03-20')
+      var reports = reporter.list({ date: d })
+
+      assert.equal(reports.length, 8, "Eight reports");
+    })
     it('should list all available reports depending on both their connection and their type', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ connection: 'wifi', type: 'sleep' })
@@ -47,6 +54,13 @@ describe('Reports', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ connection: 'cellular' }, function(err, reports) {
         assert.equal(reports.length, 4, "Four reports");
+      })
+    })
+    it('should list all the reports depending on their date within the callback', function() {
+      var reporter = new Reporter(mockConfig)
+      var d = new Date('2014-03-20')
+      var reports = reporter.list({ date: d }, function(err, reports) {
+        assert.equal(reports.length, 8, "Eight reports");
       })
     })
     it('should list all available reports depending on both their connection and their type within the callback', function() {
