@@ -11,13 +11,13 @@ describe('Reports', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list()
 
-      assert.equal(reports.length, 18, "Four reports");
+      assert.equal(reports.length, 18, "Eighteen reports");
     })
     it('should list all the reports depending on their types', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ type: 'notification' })
 
-      assert.equal(reports.length, 15, "Four reports");
+      assert.equal(reports.length, 15, "Fifteen reports");
     })
     it('should list all the reports depending on their connection', function() {
       var reporter = new Reporter(mockConfig)
@@ -29,18 +29,18 @@ describe('Reports', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ connection: 'wifi', type: 'sleep' })
 
-      assert.equal(reports.length, 1, "Four reports");
+      assert.equal(reports.length, 1, "One report");
     })
     it('should list all available reports within the callback', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list(function(err, reports) {
-        assert.equal(reports.length, 18, "Four reports");
+        assert.equal(reports.length, 18, "Eighteen reports");
       })
     })
     it('should list all the reports depending on their types within the callback', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ type: 'notification' }, function(err, reports) {
-        assert.equal(reports.length, 15, "Four reports");
+        assert.equal(reports.length, 15, "Fifteen reports");
       })
     })
     it('should list all the reports depending on their connection within the callback', function() {
@@ -52,7 +52,7 @@ describe('Reports', function() {
     it('should list all available reports depending on both their connection and their type within the callback', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list({ connection: 'wifi', type: 'sleep' }, function(err, reports) {
-        assert.equal(reports.length, 1, "Four reports");
+        assert.equal(reports.length, 1, "One report");
       })
     })
   })
