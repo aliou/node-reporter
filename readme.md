@@ -46,6 +46,8 @@ The `connection` field can take the following values:
 * `'wifi'`
 * `'wake'`
 
+The `date` field is a Date object.
+
 ## Contributing
 
 **DO NOT directly modify the `lib` files.** These files are automatically built from CoffeeScript sources located under the `src` directory.
