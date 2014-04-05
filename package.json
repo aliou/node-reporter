@@ -16,7 +16,6 @@
   "author": "Aliou Diallo <code@aliou.me>",
   "license": "MIT",
   "dependencies": {
-    "underscore": "^1.6.0",
     "path-extra": "^0.1.1"
   },
   "devDependencies": {

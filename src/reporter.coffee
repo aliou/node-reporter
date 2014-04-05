@@ -1,4 +1,3 @@
-_    = require 'underscore'
 fs   = require 'fs'
 path = require 'path-extra'
 
@@ -28,21 +27,21 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
       if file.match /.json$/
         data = fs.readFileSync path.join(directory, file)
         snapshots = JSON.parse(data).snapshots
-        _.each snapshots, (report) -> reports.push report
+        snapshots.forEach (report) -> reports.push report
 
     if options?
       if options.type?
         impetus = ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
-        reports = _.filter reports, (r) ->
+        reports = reports.filter (r) ->
           r.reportImpetus? and r.reportImpetus == impetus.indexOf options.type
 
       if options.connection?
         connections = ['cellular', 'wifi', 'none']
-        reports = _.filter reports, (r) ->
+        reports = reports.filter (r) ->
           r.connection == connections.indexOf options.connection
 
       if options.date?
-        reports = _.filter reports, (r) ->
+        reports = reports.filter (r) ->
           reportDate = new Date(r.date)
           reportDate.toDateString() == options.date.toDateString()
 
