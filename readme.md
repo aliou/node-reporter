@@ -44,7 +44,7 @@ The `type` field can take the following values:
 The `connection` field can take the following values:
 * `'cellular'`
 * `'wifi'`
-* `'wake'`
+* `'none'`
 
 The `date` field is a Date object.
 
