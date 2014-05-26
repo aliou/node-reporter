@@ -32,7 +32,7 @@ The constructor optionally can take an object with the directory of the reports.
 
 ### Reporter#list(options)
 
-List all the entries filtered by `options`. `options` is an object containing either the [type (how the report was triggered)](https://gist.github.com/dbreunig/9315705#reportimpetus) or the [network connection](https://gist.github.com/dbreunig/9315705#connection) when the report was made. Can either return the reports or pass them to a callback with the signature `function(err, reports)`.
+List all the entries filtered by `options`. `options` is an object containing either the [type (how the report was triggered)](https://gist.github.com/dbreunig/9315705#reportimpetus), the [network connection](https://gist.github.com/dbreunig/9315705#connection) when the report was made and/or the date of the report. Can either return the reports or pass them to a callback with the signature `function(err, reports)`.
 
 The `type` field can take the following values:
 * `'button'`
