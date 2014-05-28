@@ -38,6 +38,7 @@ describe('Reports', function() {
 
       assert.equal(reports.length, 1, "One report");
     })
+
     it('should list all available reports within the callback', function() {
       var reporter = new Reporter(mockConfig)
       var reports = reporter.list(function(err, reports) {
