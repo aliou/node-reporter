@@ -13,6 +13,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #           :connection - The network connection of the device when the
   #             report was made (default: all), ['cellular', 'wifi', 'none']
   #           :date - A Date object (default: none)
+  #           :between - Interval in between the report(s) is (are).
   # cb - A callback responding to the signature `function(err, reports)`
   #
   # Returns an array containing the reports or whatever the callback returns if
@@ -44,6 +45,11 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
         reports = reports.filter (r) ->
           reportDate = new Date(r.date)
           reportDate.toDateString() == options.date.toDateString()
+
+      if options.between? and options.between.start? and options.between.end?
+        reports = reports.filter (r) ->
+          reportDate = new Date(r.date)
+          +reportDate >= +options.between.start and +reportDate <= +options.between.end
 
     if cb?
       cb null, reports
