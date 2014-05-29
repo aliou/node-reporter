@@ -1,5 +1,6 @@
-fs   = require 'fs'
-path = require 'path-extra'
+fs     = require 'fs'
+helper = require './helper'
+path   = require 'path-extra'
 
 DEFAULT_FOLDER = path.join path.homedir(), 'Dropbox/Apps/Reporter-App/'
 
@@ -29,6 +30,8 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
         data = fs.readFileSync path.join(directory, file)
         snapshots = JSON.parse(data).snapshots
         snapshots.forEach (report) -> reports.push report
+
+    reports.forEach (r) -> r.date = helper.format_date(r.date)
 
     if options?
       if options.type?
