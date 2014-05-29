@@ -25,5 +25,9 @@ describe('Reports', function() {
       var reports = reporter.list({ connection: 'wifi', type: 'sleep' })
       assert.equal(reports.length, 1, "One report");
     })
+    it('should list all the reports between two dates', function() {
+      var reports = reporter.list({ between: { start: new Date('2014-03-19T20:14:42+0100'), end: new Date('2014-03-20T07:31:15+0100') } })
+      assert.equal(reports.length, 5, "Five reports");
+    })
   })
 })
