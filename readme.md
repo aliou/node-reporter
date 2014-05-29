@@ -50,13 +50,7 @@ The `date` field is a Date object.
 
 ## Contributing
 
-**DO NOT directly modify the `lib` files.** These files are automatically built from CoffeeScript sources located under the `src` directory.
-
-To do build run:
-
-```sh
-$ cake build
-```
+Pull requests are welcome! Fork the repo on [GitHub](http://github.com/aliou/node-reporter/fork)
 
 ## License
 MIT.
