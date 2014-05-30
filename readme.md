@@ -32,7 +32,7 @@ The constructor optionally can take an object with the directory of the reports.
 
 ### Reporter#list(options)
 
-List all the entries filtered by `options`. `options` is an object containing either the [type (how the report was triggered)](https://gist.github.com/dbreunig/9315705#reportimpetus), the [network connection](https://gist.github.com/dbreunig/9315705#connection) when the report was made and/or the date of the report. Can either return the reports or pass them to a callback with the signature `function(err, reports)`.
+List all the entries filtered by `options`. `options` is an object allowing you to filer reports by [type](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#reportimpetus), [connection](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#connection) and/or [date](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#date) Can either return the reports or pass them to a callback with the signature `function(err, reports)`.
 
 The `type` field can take the following values:
 * `'button'`
@@ -47,6 +47,15 @@ The `connection` field can take the following values:
 * `'none'`
 
 The `date` field is a Date object.
+
+The `between` field is an object used like this:
+
+```javascript
+var startDate = new Date('2014-02-01')
+var endDate = new Date('2014-03-01')
+
+reporter.list({ between: { start: startDate, end: endDate } })
+```
 
 ## Contributing
 
