@@ -4,7 +4,9 @@
   "description": "Reporter entries helper functions",
   "main": "./lib/reporter",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "prepublish": "cake build",
+    "pretest": "cake build"
   },
   "repository": {
     "type": "git",
