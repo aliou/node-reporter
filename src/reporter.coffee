@@ -6,6 +6,21 @@ DEFAULT_FOLDER = path.join path.homedir(), 'Dropbox/Apps/Reporter-App/'
 
 module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 (->
+  # Public: The list of questions and their default values.
+  #
+  # Returns an array containing the questions and eventually the default values.
+  @questions = ->
+    return @_questions if @_questions?
+
+    @_questions = null
+    files = fs.readdirSync @options.directory
+    if files.length
+      file = path.join(@options.directory, files[0])
+      @_questions = JSON.parse(fs.readFileSync(file)).questions
+
+    @_questions
+
+
   # Public: Retrieve reports
   #
   # options - The Hash options to filter the results by (default: {}):
