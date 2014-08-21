@@ -32,7 +32,8 @@ describe('Reports', function() {
   })
   describe('questions', function() {
     it('shoud list all the questions', function() {
-      assert.equal(reporter.questions.length, 4, "Four questions");
+      var questions = reporter.questions()
+      assert.equal(questions.length, 4, "Four questions");
     })
   })
 })
