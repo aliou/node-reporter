@@ -360,5 +360,18 @@
     }
   ],
   "questions" : [
+    {
+      "prompt" : "Where are you?"
+    },
+    {
+      "prompt" : "Who are you with?",
+      "placeholderString" : "No one"
+    },
+    {
+      "prompt" : "Are you working?"
+    },
+    {
+      "prompt" : "What are you doing?"
+    }
   ]
 }
