@@ -36,15 +36,16 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #  a callback is provided.
   @list = (options, cb) ->
     [cb, options] = [options, null] if typeof options is 'function'
-
     reports = []
-    directory = @options.directory
 
-    fs.readdirSync(directory).forEach (file) ->
+    fs.readdirSync(@options.directory).forEach (file) ->
       if file.match /.json$/
-        data = fs.readFileSync path.join(directory, file)
-        snapshots = JSON.parse(data).snapshots
+        data = JSON.parse(fs.readFileSync path.join(@options.directory, file))
+
+        @_questions = data.questions unless @_questions?
+        snapshots = data.snapshots
         snapshots.forEach (report) -> reports.push report
+    , @
 
     reports.forEach (r) -> r.date = helper.format_date r.date
 
