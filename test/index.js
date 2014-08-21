@@ -30,4 +30,9 @@ describe('Reports', function() {
       assert.equal(reports.length, 5, "Five reports");
     })
   })
+  describe('questions', function() {
+    it('shoud list all the questions', function() {
+      assert.equal(reporter.questions.length, 4, "Four questions");
+    })
+  })
 })
