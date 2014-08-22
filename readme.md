@@ -30,6 +30,10 @@ reporter.list({ connection: 'wifi' }, function(err, reports) {
 
 The constructor optionally can take an object with the directory of the reports. By default, it will use `~/Dropbox/Apps/Reporter-App/`.
 
+### Reporter#questions
+
+List the questions asked in a report with their default value.
+
 ### Reporter#list(options)
 
 List all the entries filtered by `options`. `options` is an object allowing you to filer reports by [type](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#reportimpetus), [connection](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#connection) and/or [date](https://gist.github.com/dbreunig/9315705/a85dbb45b323ed39f57720229c5cdd2da166f892#date) Can either return the reports or pass them to a callback with the signature `function(err, reports)`.
