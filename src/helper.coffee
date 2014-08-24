@@ -4,7 +4,9 @@ module.exports.format_date = (date) ->
 
   if (date.match meridiem)?
     am = (date.match /\ am/)?
-    new_date.setHours 0 if am and new_date.getHours() == 12
-    new_date.setHours new_date.getHours() + 12 if (not am) and new_date.getHours() != 12
+    if am and new_date.getHours() == 12
+      new_date.setHours 0
+    else
+      new_date.setHours new_date.getHours() + 12
 
   return new_date

@@ -20,7 +20,6 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 
     @_questions
 
-
   # Public: Retrieve reports
   #
   # options - The Hash options to filter the results by (default: {}):
