@@ -47,30 +47,47 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
     , @
 
     reports.forEach (r) -> r.date = helper.format_date r.date
-
-    if options?
-      if options.type?
-        impetus = ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
-        reports = reports.filter (r) ->
-          r.reportImpetus? and r.reportImpetus == impetus.indexOf options.type
-
-      if options.connection?
-        connections = ['cellular', 'wifi', 'none']
-        reports = reports.filter (r) ->
-          r.connection == connections.indexOf options.connection
-
-      if options.date?
-        reports = reports.filter (r) ->
-          reportDate = new Date(r.date)
-          reportDate.toDateString() == options.date.toDateString()
-
-      if options.between? and options.between.start? and options.between.end?
-        reports = reports.filter (r) ->
-          reportDate = new Date(r.date)
-          +reportDate >= +options.between.start and +reportDate <= +options.between.end
+    reports = reportFilter(reports, options)
 
     if cb?
       cb null, reports
     else
       reports
 ).call(Reports.prototype)
+
+# Private: Filter reports.
+#
+# reports - The reports to filter.
+#
+# options - The Hash options to filter the results by (default: {}):
+#           :type - The type of notifications (default: all):
+#             ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
+#           :connection - The network connection of the device when the
+#             report was made (default: all), ['cellular', 'wifi', 'none']
+#           :date - A Date object (default: none)
+#           :between - Interval in between the report(s) is (are).
+#
+# Returns an array containing the filtered reports.
+reportFilter = (reports, options) ->
+  if options?
+    if options.type?
+      impetus = ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
+      reports = reports.filter (r) ->
+        r.reportImpetus? and r.reportImpetus == impetus.indexOf options.type
+
+    if options.connection?
+      connections = ['cellular', 'wifi', 'none']
+      reports = reports.filter (r) ->
+        r.connection == connections.indexOf options.connection
+
+    if options.date?
+      reports = reports.filter (r) ->
+        reportDate = new Date(r.date)
+        reportDate.toDateString() == options.date.toDateString()
+
+    if options.between? and options.between.start? and options.between.end?
+      reports = reports.filter (r) ->
+        rDate = new Date(r.date)
+        +rDate >= +options.between.start and +rDate <= +options.between.end
+
+  reports
