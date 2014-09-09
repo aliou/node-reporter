@@ -20,7 +20,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 
     @_questions
 
-  # Public: Retrieve reports
+  # Public: Retrieve snapshots
   #
   # options - The Hash options to filter the results by (default: {}):
   #           :type - The type of notifications (default: all):
@@ -33,7 +33,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #
   # Returns an array containing the reports or whatever the callback returns if
   #  a callback is provided.
-  @list = (options, cb) ->
+  @snapshots = (options, cb) ->
     [cb, options] = [options, null] if typeof options is 'function'
     reports = []
 
@@ -53,6 +53,8 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
       cb null, reports
     else
       reports
+
+  @list = @snapshots
 ).call(Reports.prototype)
 
 # Private: Filter reports.
