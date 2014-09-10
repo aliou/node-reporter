@@ -2,6 +2,8 @@ fs     = require 'fs'
 helper = require './helper'
 path   = require 'path-extra'
 
+Snapshot = require './Snapshot'
+
 DEFAULT_FOLDER = path.join path.homedir(), 'Dropbox/Apps/Reporter-App/'
 
 module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
@@ -42,12 +44,11 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
         data = JSON.parse(fs.readFileSync path.join(@options.directory, file))
 
         @_questions = data.questions unless @_questions?
-        snapshots = data.snapshots
-        snapshots.forEach (report) -> reports.push report
+        data.snapshots.forEach (report) ->
+          reports.push Snapshot.initFromObject(report)
     , @
 
-    reports.forEach (r) -> r.date = helper.format_date r.date
-    reports = filterSnapshots(reports, options)
+    reports = reportFilter(reports, options)
 
     if cb?
       cb null, reports
