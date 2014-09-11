@@ -48,7 +48,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
           reports.push Snapshot.initFromObject(report)
     , @
 
-    reports = reportFilter(reports, options)
+    reports = filterSnapshots(reports, options)
 
     if cb?
       cb null, reports
