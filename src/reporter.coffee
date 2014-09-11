@@ -54,6 +54,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
     else
       reports
 
+  # Public: Alias to the `snapshots` method.
   @list = @snapshots
 ).call(Reports.prototype)
 
