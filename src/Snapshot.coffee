@@ -1,6 +1,11 @@
 helper = require './helper'
 
 class Snapshot
+  # Public: Initialize the Snapshot object using object.
+  # Will take all the attributes / keys of the argument object and add them as
+  #  private attributes in the Snapshot object
+  #
+  # obj - The deserialized object from JSON.
   @initFromObject = (obj) ->
     snapshot = new @
 
