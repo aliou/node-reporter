@@ -1,5 +1,3 @@
-helper = require './helper'
-
 class Snapshot
   # Public: Initialize the Snapshot object using object.
   # Will take all the attributes / keys of the argument object and add them as
@@ -12,7 +10,7 @@ class Snapshot
     for key, value of obj
       snapshot['_' + key] = obj[key]
 
-    snapshot.date = helper.format_date snapshot._date
+    Snapshot.format_date snapshot
 
     snapshot
 
@@ -34,6 +32,23 @@ class Snapshot
   between: (start, end) ->
     +@date >= +start and +@date <= +end
 
+  # Private: Correctly formats the date of a snapshot.
+  #
+  # On some device, a snapshot date will look like this:
+  #  '2014-08-19T11:25:19 pm+0200' which is not corrected parsed by the Date
+  #  object.
+  #
+  # Returns nothing.
+  @format_date = (snapshot) ->
+    date = snapshot._date
+    meridiem = /\ (a|p)m/
+    snapshot.date = new Date(date.replace meridiem, '')
 
+    if (date.match meridiem)?
+      am = (date.match /\ am/)?
+      if am and snapshot.date.getHours() == 12
+        snapshot.date.setHours 0
+      else
+        snapshot.date.setHours snapshot.date.getHours() + 12
 
 module.exports = Snapshot
