@@ -57,6 +57,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 
   # Public: Alias to the `snapshots` method.
   @list = @snapshots
+
 ).call(Reports.prototype)
 
 # Private: Filter snapshots.
