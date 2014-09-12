@@ -1,5 +1,5 @@
 class Snapshot
-  # Public: Initialize the Snapshot object using object.
+  # Public: Initialize the Snapshot object using an object.
   # Will take all the attributes / keys of the argument object and add them as
   #  private attributes in the Snapshot object
   #
@@ -11,7 +11,7 @@ class Snapshot
     Snapshot.expose(snapshot, key) for key in ['battery']
     Snapshot.format_date snapshot
 
-    snapshot
+    return snapshot
 
   # Public: Get the snapshot impetus (the type of notification).
   #
