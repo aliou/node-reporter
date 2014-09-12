@@ -7,9 +7,8 @@ class Snapshot
   @initFromObject = (obj) ->
     snapshot = new @
 
-    for key, value of obj
-      snapshot['_' + key] = obj[key]
-
+    snapshot['_' + key] = obj[key] for key, value of obj
+    Snapshot.expose(snapshot, key) for key in ['battery']
     Snapshot.format_date snapshot
 
     snapshot
@@ -31,6 +30,14 @@ class Snapshot
   # Returns a Boolean.
   between: (start, end) ->
     +@date >= +start and +@date <= +end
+
+  # Private: Exposes private attributes.
+  #
+  # Returns nothing.
+  @expose = (snapshot, key) ->
+    privateKey = '_' + key
+
+    [snapshot[key], snapshot[privateKey]] = [snapshot[privateKey], undefined]
 
   # Private: Correctly formats the date of a snapshot.
   #
