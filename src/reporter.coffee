@@ -76,14 +76,12 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 filterSnapshots = (snapshots, options) ->
   if options?
     if options.type?
-      impetus = ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
       snapshots = snapshots.filter (r) ->
-        r.reportImpetus? and r.reportImpetus == impetus.indexOf options.type
+        r.impetus() == options.type
 
     if options.connection?
-      connections = ['cellular', 'wifi', 'none']
       snapshots = snapshots.filter (r) ->
-        r.connection == connections.indexOf options.connection
+        r.connection() == options.connection
 
     if options.date?
       snapshots = snapshots.filter (r) ->
@@ -92,7 +90,6 @@ filterSnapshots = (snapshots, options) ->
 
     if options.between? and options.between.start? and options.between.end?
       snapshots = snapshots.filter (r) ->
-        rDate = new Date(r.date)
-        +rDate >= +options.between.start and +rDate <= +options.between.end
+        r.between(options.between.start, options.between.end)
 
   snapshots
