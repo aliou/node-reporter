@@ -9,9 +9,11 @@ describe 'Snapshot', ->
     it 'shoud return the impetus string', ->
       assert.equal snapshot.impetus(), 'wake'
 
+  describe '#connection', ->
     it 'shoud return the connection string', ->
       assert.equal snapshot.connection(), 'wifi'
 
+  describe '#between', ->
     it 'shoud return true if the report date is in the interval', ->
       start = new Date('2014-03-18T20:14:42+0100')
       end = new Date('2014-03-20T07:31:15+0100')
