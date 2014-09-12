@@ -1,6 +1,5 @@
-fs     = require 'fs'
-helper = require './helper'
-path   = require 'path-extra'
+fs   = require 'fs'
+path = require 'path-extra'
 
 Snapshot = require './Snapshot'
 
@@ -31,7 +30,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #             report was made (default: all), ['cellular', 'wifi', 'none']
   #           :date - A Date object (default: none)
   #           :between - Interval in between the report(s) is (are).
-  # cb - A callback responding to the signature `function(err, reports)`
+  # cb      - A callback responding to the signature `function(err, reports)`
   #
   # Returns an array containing the reports or whatever the callback returns if
   #  a callback is provided.
