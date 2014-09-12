@@ -13,7 +13,6 @@ class Snapshot
       snapshot['_' + key] = obj[key]
 
     snapshot.date = helper.format_date snapshot._date
-    alias key for key in ['battery', 'location']
 
     snapshot
 
@@ -35,13 +34,6 @@ class Snapshot
   between: (start, end) ->
     +@date >= +start and +@date <= +end
 
-  # Private: Expose an attribute from a Snapshot object.
-  #
-  # Returns nothing.
-  alias = (key) ->
-    privateKey = '_' + key
 
-    @[key] = @[privateKey]
-    @[privateKey] = undefined
 
 module.exports = Snapshot
