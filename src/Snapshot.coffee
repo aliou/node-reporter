@@ -15,19 +15,19 @@ class Snapshot
 
   # Public: Get the snapshot impetus (the type of notification).
   #
-  # Returns the impetus String.
+  # Returns the impetus {String}.
   impetus: ->
     ['button', 'buttonAsleep', 'notification', 'sleep', 'wake'][@_reportImpetus]
 
   # Public: Get the device connection during the snapshot.
   #
-  # Returns the connection String.
+  # Returns the connection {String}.
   connection: ->
     ['cellular', 'wifi', 'none'][@_connection]
 
   # Public: Whether or not the snapshot date is in a interval.
   #
-  # Returns a Boolean.
+  # Returns a {Boolean}.
   between: (start, end) ->
     +@date >= +start and +@date <= +end
 
