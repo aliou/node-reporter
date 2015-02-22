@@ -1,4 +1,4 @@
-assert   = require 'assert'
+expect   = require('chai').expect
 Reporter = require '../lib/reporter'
 
 reporter = new Reporter { directory: __dirname + '/data/' }
@@ -6,16 +6,16 @@ snapshot = reporter.snapshots()[0]
 
 describe 'Snapshot', ->
   describe '#impetus', ->
-    it 'shoud return the impetus string', ->
-      assert.equal snapshot.impetus(), 'wake'
+    it 'returns the impetus string', ->
+      expect(snapshot.impetus()).to.eq('wake')
 
   describe '#connection', ->
     it 'shoud return the connection string', ->
-      assert.equal snapshot.connection(), 'wifi'
+      expect(snapshot.connection()).to.eq('wifi')
 
   describe '#between', ->
-    it 'shoud return true if the report date is in the interval', ->
+    it 'returns true if the report date is in the interval', ->
       start = new Date('2014-03-18T20:14:42+0100')
       end = new Date('2014-03-20T07:31:15+0100')
 
-      assert.ok snapshot.between(start, end)
+      expect(snapshot.between(start, end)).to.be.true
