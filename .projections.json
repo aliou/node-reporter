@@ -1,0 +1,10 @@
+{
+  "src/*.coffee": {
+    "alternate": "test/{}.coffee",
+    "type": "source"
+  },
+  "test/*.coffee": {
+    "alternate": "src/{}.coffee",
+    "type": "test"
+  }
+}
