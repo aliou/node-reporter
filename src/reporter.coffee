@@ -1,6 +1,7 @@
-fs     = require 'fs'
-helper = require './helper'
-path   = require 'path-extra'
+fs   = require 'fs'
+path = require 'path-extra'
+
+Snapshot = require './Snapshot'
 
 DEFAULT_FOLDER = path.join path.homedir(), 'Dropbox/Apps/Reporter-App/'
 
@@ -29,7 +30,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
   #             report was made (default: all), ['cellular', 'wifi', 'none']
   #           :date - A Date object (default: none)
   #           :between - Interval in between the report(s) is (are).
-  # cb - A callback responding to the signature `function(err, reports)`
+  # cb      - A callback responding to the signature `function(err, reports)`
   #
   # Returns an array containing the reports or whatever the callback returns if
   #  a callback is provided.
@@ -42,11 +43,10 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
         data = JSON.parse(fs.readFileSync path.join(@options.directory, file))
 
         @_questions = data.questions unless @_questions?
-        snapshots = data.snapshots
-        snapshots.forEach (report) -> reports.push report
+        data.snapshots.forEach (report) ->
+          reports.push Snapshot.initFromObject(report)
     , @
 
-    reports.forEach (r) -> r.date = helper.format_date r.date
     reports = filterSnapshots(reports, options)
 
     if cb?
@@ -56,6 +56,7 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 
   # Public: Alias to the `snapshots` method.
   @list = @snapshots
+
 ).call(Reports.prototype)
 
 # Private: Filter snapshots.
@@ -74,14 +75,12 @@ module.exports = Reports = (@options = { directory: DEFAULT_FOLDER }) ->
 filterSnapshots = (snapshots, options) ->
   if options?
     if options.type?
-      impetus = ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
       snapshots = snapshots.filter (r) ->
-        r.reportImpetus? and r.reportImpetus == impetus.indexOf options.type
+        r.impetus() == options.type
 
     if options.connection?
-      connections = ['cellular', 'wifi', 'none']
       snapshots = snapshots.filter (r) ->
-        r.connection == connections.indexOf options.connection
+        r.connection() == options.connection
 
     if options.date?
       snapshots = snapshots.filter (r) ->
@@ -90,7 +89,6 @@ filterSnapshots = (snapshots, options) ->
 
     if options.between? and options.between.start? and options.between.end?
       snapshots = snapshots.filter (r) ->
-        rDate = new Date(r.date)
-        +rDate >= +options.between.start and +rDate <= +options.between.end
+        r.between(options.between.start, options.between.end)
 
   snapshots
