@@ -17,12 +17,14 @@ class Snapshot
   #
   # Returns the impetus {String}.
   impetus: ->
+    return '' if @_reportImpetus < 0 or @_reportImpetus > 4
     ['button', 'buttonAsleep', 'notification', 'sleep', 'wake'][@_reportImpetus]
 
   # Public: Get the device connection during the snapshot.
   #
   # Returns the connection {String}.
   connection: ->
+    return '' if @_connection < 0 or @_connection > 3
     ['cellular', 'wifi', 'none'][@_connection]
 
   # Public: Whether or not the snapshot date is in a interval.
