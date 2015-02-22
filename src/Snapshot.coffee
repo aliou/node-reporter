@@ -4,6 +4,8 @@ class Snapshot
   #  private attributes in the Snapshot object
   #
   # obj - The deserialized object from JSON.
+  #
+  # Returns a new {Snapshot}.
   @initFromObject = (obj) ->
     snapshot = new @
 
