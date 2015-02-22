@@ -18,10 +18,10 @@
   "author": "Aliou Diallo <code@aliou.me>",
   "license": "MIT",
   "dependencies": {
-    "path-extra": "^0.1.1"
+    "path-extra": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "^1.18.2",
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.9.1",
+    "mocha": "^2.1.0"
   }
 }
