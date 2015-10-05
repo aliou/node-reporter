@@ -4,8 +4,8 @@
   "description": "Reporter entries helper functions",
   "main": "./lib/reporter",
   "scripts": {
-    "test": "mocha --reporter spec  --compilers js:babel/register",
-    "compile": "babel -d lib/ src/",
+    "test": "./node_modules/mocha/bin/mocha --reporter spec  --compilers js:babel/register",
+    "compile": "./node_modules/babel/bin/babel.js -d lib/ src/",
     "prepublish": "npm run compile",
     "pretest": "npm run compile"
   },
