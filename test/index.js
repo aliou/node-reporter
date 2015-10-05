@@ -13,22 +13,22 @@ describe('Reports', () => {
 
     it('should list all the reports depending on their types', () => {
       const reports = reporter.snapshots({ type: 'notification' });
-      assert.equal(reports.length, 15, 'Eighteen reports');
+      assert.equal(reports.length, 15, 'Fifteen reports');
     });
 
     it('should list all the reports depending on their connection', () => {
       const reports = reporter.snapshots({ connection: 'cellular' });
-      assert.equal(reports.length, 4, 'Eighteen reports');
+      assert.equal(reports.length, 4, 'Four reports');
     });
 
     it('should list all the reports depending on their date', () => {
       const reports = reporter.snapshots({ date: new Date('2014-03-20') });
-      assert.equal(reports.length, 8, 'Eighteen reports');
+      assert.equal(reports.length, 8, 'Eight reports');
     });
 
     it('should list all available reports depending on both their connection and their type', () => {
       const reports = reporter.snapshots({ connection: 'wifi', type: 'sleep' });
-      assert.equal(reports.length, 1, 'Eighteen reports');
+      assert.equal(reports.length, 1, 'one report');
     });
 
     it('should list all the reports between two dates', () => {
