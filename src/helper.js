@@ -5,7 +5,7 @@ export function formatDate(date) {
   if (date.match(meridiem)) {
     const morning = date.match(/\ am/);
 
-    if (am && newDate.getHours() == 12) {
+    if (morning && newDate.getHours() == 12) {
       newDate.setHours(0);
     } else {
       newDate.setHours(newDate.getHours() + 12);
