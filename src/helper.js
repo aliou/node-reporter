@@ -12,5 +12,5 @@ export function formatDate(date) {
     }
   }
 
-  return newDate
+  return newDate;
 }

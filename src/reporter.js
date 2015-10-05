@@ -40,12 +40,12 @@ class Reports {
         let data = JSON.parse(fs.readFileSync(path.join(
                 this.options.directory, file)));
 
-        if (this._questions == null) {
+        if (this._questions === null) {
           this._questions = data.questions;
         }
         reports = combine(reports, data.snapshots);
       }
-    })
+    });
 
     reports.forEach(report => {
       report.date = helper.formatDate(report.date);
