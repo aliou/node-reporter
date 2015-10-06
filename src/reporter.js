@@ -9,6 +9,9 @@ class Reports {
     this.options = options;
   }
 
+  // Public: The list of questions and their default values.
+  //
+  // Returns an array containing the questions and eventually the default values.
   questions() {
     if (this._questions) {
       return this.questions;
@@ -25,6 +28,19 @@ class Reports {
     return (this._questions);
   }
 
+  // Public: Retrieve snapshots
+  //
+  // options - The Hash options to filter the results by (default: {}):
+  //           :type - The type of notifications (default: all):
+  //             ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
+  //           :connection - The network connection of the device when the
+  //             report was made (default: all), ['cellular', 'wifi', 'none']
+  //           :date - A Date object (default: none)
+  //           :between - Interval in between the report(s) is (are).
+  // cb - A callback responding to the signature `function(err, reports)`
+  //
+  // Returns an array containing the reports or whatever the callback returns if
+  //  a callback is provided.
   snapshots(options, cb) {
     const combine = (...arrays) => [].concat(...arrays);
 
@@ -61,6 +77,19 @@ class Reports {
   }
 }
 
+// Private: Filter reports.
+//
+// reports - The reports to filter.
+//
+// options - The Hash options to filter the results by (default: {}):
+//           :type - The type of notifications (default: all):
+//             ['button', 'buttonAsleep', 'notification', 'sleep', 'wake']
+//           :connection - The network connection of the device when the
+//             report was made (default: all), ['cellular', 'wifi', 'none']
+//           :date - A Date object (default: none)
+//           :between - Interval in between the report(s) is (are).
+//
+// Returns an array containing the filtered reports.
 function filterReports(reports, options) {
   if (!options) {
     return (reports);
@@ -91,7 +120,8 @@ function filterReports(reports, options) {
   if (options.between && options.between.start && options.between.end) {
     reports = reports.filter(report => {
       const reportDate = new Date(report.date);
-      return +reportDate >= +options.between.start && +reportDate <= +options.between.end;
+      return +reportDate >= +options.between.start &&
+        +reportDate <= +options.between.end;
     });
   }
 
