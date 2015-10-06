@@ -55,6 +55,10 @@ class Reports {
     if (cb) { return cb(null, reports); }
     return reports;
   }
+
+  list(options, cb) {
+    return (snapshots(options, cb));
+  }
 }
 
 function filterReports(reports, options) {
