@@ -1,5 +1,7 @@
 # node-reporter
 
+[![Build Status](https://travis-ci.org/aliou/node-reporter.svg?branch=master)](https://travis-ci.org/aliou/node-reporter)
+
 `node-reporter` is a node.js module to retrieve and manipulate report files from the [Reporter Application](http://www.reporter-app.com).
 
 ## Installation
