@@ -73,7 +73,7 @@ class Reports {
   }
 
   list(options, cb) {
-    return (snapshots(options, cb));
+    return (this.snapshots(options, cb));
   }
 }
 
