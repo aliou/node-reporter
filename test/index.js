@@ -39,4 +39,40 @@ describe('Reports', () => {
       assert.equal(reports.length, 5, 'Eighteen reports');
     });
   });
+  describe('#list', () => {
+
+    it('shoud list all available reports as snapshots', () => {
+      const reports = reporter.list();
+      assert.equal(reports.length, 18, 'Eighteen reports');
+    });
+
+    it('should list all the reports depending on their types', () => {
+      const reports = reporter.list({ type: 'notification' });
+      assert.equal(reports.length, 15, 'Fifteen reports');
+    });
+
+    it('should list all the reports depending on their connection', () => {
+      const reports = reporter.list({ connection: 'cellular' });
+      assert.equal(reports.length, 4, 'Four reports');
+    });
+
+    it('should list all the reports depending on their date', () => {
+      const reports = reporter.list({ date: new Date('2014-03-20') });
+      assert.equal(reports.length, 8, 'Eight reports');
+    });
+
+    it('should list all available reports depending on both their connection and their type', () => {
+      const reports = reporter.list({ connection: 'wifi', type: 'sleep' });
+      assert.equal(reports.length, 1, 'one report');
+    });
+
+    it('should list all the reports between two dates', () => {
+      const start = new Date('2014-03-19T20:14:42+0100');
+      const end = new Date('2014-03-20T07:31:15+0100');
+      const reports = reporter.list({ between: { start: start, end: end } });
+
+      assert.equal(reports.length, 5, 'Eighteen reports');
+    });
+  });
+
 });
